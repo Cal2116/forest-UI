@@ -21,6 +21,7 @@ interface BaseButtonProps {
   btnType?: ButtonType;
   children?: React.ReactNode;
   href?: string;
+  circular?: boolean;
 }
 
 type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
@@ -35,12 +36,14 @@ const Button: React.FC<ButtonProps> = (props) => {
     size,
     children,
     href,
+    circular,
     ...restProps
   } = props
 
   const classes = classNames('btn', className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
+    'btn-circular': (btnType !== ButtonType.Link) && circular,
     'disabled': (btnType === ButtonType.Link) && disabled
   })
 
@@ -69,7 +72,8 @@ const Button: React.FC<ButtonProps> = (props) => {
 
 Button.defaultProps = {
   disabled: false,
-  btnType: ButtonType.Default
+  btnType: ButtonType.Default,
+  circular: false
 }
 
 export default Button

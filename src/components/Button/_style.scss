@@ -47,6 +47,10 @@
   @include button-style($white, $gray-400, $body-color, $btn-border-dashed, $white, $primary, $primary)
 }
 
+.btn-circular {
+  border-radius: 50%;
+}
+
 .btn-link {
   font-weight: $font-weight-normal;
   color: $btn-link-color;

@@ -51,6 +51,14 @@ function App() {
           <Button btnType={ButtonType.Link} size={ButtonSize.Small} href='http://www.baidu.com'> Small Link Button</Button>
           <Button btnType={ButtonType.Link} size={ButtonSize.Small} disabled href='http://www.baidu.com'> Small disabled Link Button</Button>
         </div>
+        <div>
+          <h2>Circular Button</h2>
+          <Button btnType={ButtonType.Primary} circular>1</Button>
+          <Button btnType={ButtonType.Primary} circular disabled>1</Button>
+          <Button btnType={ButtonType.Danger} circular>1</Button>
+          <Button btnType={ButtonType.Danger} circular disabled>1</Button>
+          <Button btnType={ButtonType.Dashed} circular disabled>1</Button>
+        </div>
       </div>
     </div>
   );
