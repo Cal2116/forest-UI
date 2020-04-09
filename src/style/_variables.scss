@@ -185,6 +185,10 @@ $btn-font-family:             $font-family-base !default;
 $btn-font-size:               $font-size-base !default;
 $btn-line-height:             $line-height-base !default;
 
+// 按钮边框类型
+$btn-border-dashed:           dashed;
+$btn-border-solid:            solid;
+
 //不同大小按钮的 padding 和 font size
 $btn-padding-y-sm:            .25rem !default;
 $btn-padding-x-sm:            .5rem !default;
